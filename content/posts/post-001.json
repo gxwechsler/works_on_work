@@ -1,0 +1,30 @@
+{
+  "id": "post-001",
+  "date": "2026-02-05",
+  "title": {
+    "en": "Neither merely Artificial, nor intrinsically Intelligent",
+    "es": "Ni meramente Artificial, ni intrínsecamente Inteligente"
+  },
+  "body": {
+    "en": "<p>AI. Artificial Intelligence. Artificial but inextricable bond to natural evolution: Intelligent, but delusional when left by itself. AI is a machine for compressing and recombining human inscriptions at scale. Its physics conforms with nature\u2019s quarks, electromagnetic fields and inscriptions. It does not have \u2018being-toward-death\u2019. No dignity, no honor, no shame, no attachments. It does not \u201cunderstand\u201d by itself; it distinguishes patterns, it predicts patterns and composes patterns.</p>\n<p>What looks like intelligence is the convergence of five environments: training on human outputs, mathematical algorithms, computing tooling, data set pipelines, and human institutions that decide what counts as correct, safe, and valuable.</p>\n<p>A new rounded stone. A new bone. A new tool. A powerful collective indeed. We argue over the institutional arrangements that will govern how far it goes in uses that affect our existence in peace and war. What is the balance of the values it generates, the environmental and social forces it erodes, and the profiting it\u2019s allowed.</p>\n<p>AI is fascinating, neither merely Artificial, nor autonomously Intelligent, our challenge is building only accountable systems around it before incentives and resource constraints turn its power into damage. The machine has porous borders, we should not be shy to explore it, as the young vibrant <a href=\"https://suchir.net/fair_use.html\">Suchir Balaji</a>.</p>",
+    "es": null
+  },
+  "dedication": {
+    "en": null,
+    "es": null
+  },
+  "slots": [
+    ["AI", "AI_governance"],
+    [],
+    [],
+    [],
+    []
+  ],
+  "downloads": {
+    "en": null,
+    "es": null
+  },
+  "license": "CC BY 4.0",
+  "archived": false,
+  "comments": []
+}
