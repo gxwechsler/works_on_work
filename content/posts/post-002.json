@@ -1,0 +1,38 @@
+{
+  "id": "post-002",
+  "date": "2026-04-05",
+  "title": {
+    "en": "Sovereign Loop",
+    "es": "Sovereign Loop"
+  },
+  "body": {
+    "en": "<p>A new working document is available for download: <i>Output, Accountability, and the Sovereign Loop</i>.</p>\n\n<p>The document makes one argument. Human-in-the-Loop is not a governance preference. It is an ontological requirement. The reason is not that humans are smarter than machines. It is that humans are the only nodes in any human-machine system whose outputs carry existential weight — the only beings for whom being wrong is a wound, not a metric.</p>\n\n<p>The practical contribution is a five-condition diagnostic: Field, Agency, Accounting, Finitude, Stewardship. These specify what an organization must provide for HITL to be real rather than ceremonial. A human who cannot refuse without career cost is not exercising agency. A human approving outputs without genuine deliberation is an input-process-output system with a pulse.</p>\n\n<p>The conditions are not co-equal. Treating them as interchangeable is the diagnostic error. Field and Agency are load-bearing — without them, Accounting, Finitude, and Stewardship have no substrate. An organization that invests equally across all five when the first two are broken is burning resources. That is waste, measurable in time and money. And the moment a serious operator sees you treating structural dependencies as a flat checklist, you have lost legitimacy.</p>\n\n<p>The electrician does not test every wire with equal attention. The electrician reads the circuit and goes to where the fault is.</p>",
+    "es": null
+  },
+  "dedication": {
+    "en": null,
+    "es": null
+  },
+  "slots": [
+    [
+      "HITL"
+    ],
+    [
+      "Accountability"
+    ],
+    [
+      "LLM"
+    ],
+    [
+      "Input-Output"
+    ],
+    []
+  ],
+  "downloads": {
+    "en": "assets/downloads/sovereign_loop.pdf",
+    "es": null
+  },
+  "license": "CC BY 4.0",
+  "archived": false,
+  "comments": []
+}
