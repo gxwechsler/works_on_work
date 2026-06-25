@@ -15,13 +15,13 @@
   },
   "slots": [
     [
-      "AI Governance"
+      "ai_governance"
     ],
     [
-      "AI Institutional Arrangement"
+      "ai_institutional_arrangement"
     ],
     [
-      "Decision Lineages"
+      "decision_lineages"
     ],
     [],
     []
