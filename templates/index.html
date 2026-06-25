@@ -740,6 +740,8 @@ let currentLang = 'en';
 let currentView = 'cloud';
 let currentTagKey = null;
 let lastTagKey = null;
+let currentPostId = null;
+let currentPostFromTag = null;
 
 // =============================================
 // TAG COMPUTATION
@@ -1017,9 +1019,11 @@ function navigate(view) {
       document.getElementById('viewCloud').classList.add('active');
       break;
     case 'tagList':
+      renderTagList(currentTagKey);
       document.getElementById('viewTagList').classList.add('active');
       break;
     case 'post':
+      renderPost(currentPostId, currentPostFromTag);
       document.getElementById('viewPost').classList.add('active');
       break;
     case 'about':
@@ -1042,12 +1046,12 @@ function navigate(view) {
 function showTag(tagKey) {
   currentTagKey = tagKey;
   lastTagKey = tagKey;
-  renderTagList(tagKey);
   navigate('tagList');
 }
 
 function showPost(postId, fromTag) {
-  renderPost(postId, fromTag);
+  currentPostId = postId;
+  currentPostFromTag = fromTag;
   navigate('post');
 }
 
