@@ -371,6 +371,28 @@
     letter-spacing: 0.03em;
   }
 
+  .post-notify { margin-top: 22px; }
+  .post-notify-label {
+    font-size: 9px; font-weight: 300; color: var(--faint);
+    letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px;
+  }
+  .post-notify input {
+    font-family: var(--font); font-size: 11px; font-weight: 300; color: var(--black);
+    background: none; border: none; border-bottom: 1px solid var(--ghost);
+    padding: 4px 0; margin-right: 16px; width: 140px;
+  }
+  .post-notify input:focus { outline: none; border-bottom-color: var(--mid); }
+  .post-notify button {
+    font-family: var(--font); font-size: 10px; font-weight: 300; color: var(--mid);
+    background: none; border: 1px solid var(--ghost); padding: 5px 12px; cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+  .post-notify button:hover { color: var(--black); border-color: var(--mid); }
+  .post-notify-note {
+    font-size: 9px; font-weight: 300; color: var(--faint);
+    margin-top: 10px; letter-spacing: 0.03em;
+  }
+
   /* Comments section */
   .comments-section {
     margin-bottom: 48px;
@@ -645,6 +667,19 @@
 const SLOT_WEIGHTS = [5, 4, 3, 2, 1];
 
 const posts = /*__POSTS_JSON__*/;
+const CONTACT_EMAIL = '/*__CONTACT_EMAIL__*/';
+
+// Soft signup: static site, no backend. Opens a prefilled email to the author.
+// To use a provider instead, POST to your endpoint here and `return false`.
+function subscribeSoft(e){
+  e.preventDefault();
+  const f = e.target;
+  const name = encodeURIComponent((f.elements['name'].value||'').trim());
+  const email = encodeURIComponent((f.elements['email'].value||'').trim());
+  const subj = encodeURIComponent('works_on_work — keep me posted');
+  window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + subj + '&body=Name:%20' + name + '%0AEmail:%20' + email;
+  return false;
+}
 
 const unlinkedComments = /*__UNLINKED_JSON__*/;
 
@@ -668,6 +703,11 @@ const labels = {
     archiveSubtitle: 'posts no longer in the cloud',
     archiveEmpty: 'nothing here yet',
     unlinkedEmpty: 'no unlinked comments',
+    notifyLabel: 'stay posted',
+    notifyName: 'name',
+    notifyEmail: 'email',
+    notifyBtn: 'notify me',
+    notifyNote: 'optional — the download above is free, no sign-up required.',
     langToggle: 'ES'
   },
   es: {
@@ -684,6 +724,11 @@ const labels = {
     archiveSubtitle: 'publicaciones fuera de la nube',
     archiveEmpty: 'nada aquí aún',
     unlinkedEmpty: 'sin comentarios desenlazados',
+    notifyLabel: 'recibe novedades',
+    notifyName: 'nombre',
+    notifyEmail: 'correo',
+    notifyBtn: 'avísame',
+    notifyNote: 'opcional — la descarga de arriba es libre, sin registro.',
     langToggle: 'EN'
   }
 };
@@ -845,6 +890,13 @@ function renderPost(postId, fromTag) {
         ${post.downloads.en ? `<a class="download-link" href="${post.downloads.en}">PDF (EN)</a>` : ''}
         ${post.downloads.es ? `<a class="download-link" href="${post.downloads.es}">PDF (ES)</a>` : ''}
         <div class="license-note">${post.license}</div>
+        <form class="post-notify" onsubmit="return subscribeSoft(event)">
+          <div class="post-notify-label">${l.notifyLabel}</div>
+          <input type="text" name="name" placeholder="${l.notifyName}" autocomplete="name">
+          <input type="email" name="email" placeholder="${l.notifyEmail}" autocomplete="email">
+          <button type="submit">${l.notifyBtn}</button>
+          <div class="post-notify-note">${l.notifyNote}</div>
+        </form>
       </div>
     `;
   }
